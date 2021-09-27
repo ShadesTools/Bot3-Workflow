@@ -30,8 +30,8 @@ jobs:
 
       - name: Setup git Environment
         run: |
-          git config --global user.name "Velosh"
-          git config --global user.email "daffetyxd@gmail.com"
+          git config --global user.name "ShadesTools"
+          git config --global user.email "berkays0707@gmail.com"
           git config --global pull.rebase false
           git config --global credential.helper store
           echo "https://Velosh:${{ secrets.GH_TTH }}@github.com" > ~/.git-credentials
@@ -43,24 +43,24 @@ jobs:
           touch configs.prop
           touch allowed2port.json
           echo "bot-token=${{ secrets.GH }}" >> configs.prop
-          echo "bot-username=veloshstagingbot" >> configs.prop
-          echo "bot-master=1072790346" >> configs.prop
+          echo "bot-username=@ProjectTreble_Bot" >> configs.prop
+          echo "bot-master=677702936" >> configs.prop
           echo "privateChat=-1001374650142" >> configs.prop
           echo "requestChat=-1001383418886" >> configs.prop
-          echo "publicChannel=TrebleExperience" >> configs.prop
+          echo "publicChannel=berkaygsis" >> configs.prop
           echo "bot-sf-pass=${{ secrets.PASS_SF }}" >> sf-creds.prop
-          echo "bot-sf-proj=trebleexperience" >> sf-creds.prop
-          echo "bot-sf-user=velosh" >> sf-creds.prop
-          echo "bot-announcement-id=-1001489409825" >> sf-creds.prop
+          echo "bot-sf-proj=berkay-gsi" >> sf-creds.prop
+          echo "bot-sf-user=berkay-gsi" >> sf-creds.prop
+          echo "bot-announcement-id=-1001178894412" >> sf-creds.prop
           echo "bot-sf-host=frs.sourceforge.net" >> sf-creds.prop
           echo "bot-send-announcement=true" >> sf-creds.prop
-          echo '["1195724888","1484670029","1628025516","1469015383","1263663104"]' >> allowed2port.json
+          echo '["1263663104","1469015383","1032274246","1186205613","522458637","760404389","1179129272","968189873","678206065"]' >> allowed2port.json
 
       - name: Clone workflow
         continue-on-error: true
         run: |
           mkdir tmp && cd tmp
-          git clone https://github.com/VeloshGSIs/Bot3-Workflow Bobot
+          git clone https://github.com/ShadesTools/Bot3-Workflow Bobot
 
       - name: Install tools/packages
         continue-on-error: true
@@ -93,7 +93,7 @@ jobs:
           sudo dpkg --purge --force-depends ca-certificates-java
           sudo apt-get install ca-certificates-java -y
           cd ${ABC}
-          git clone https://github.com/TrebleExperience/Bot3 Bot; cd Bot
+          git clone https://github.com/ShadesTools/Bot3 Bot; cd Bot
           wget 'https://gist.githubusercontent.com/Velosh/95c9844c8a259fc99ec1f09c7c432781/raw/1f5ee87215c4b144bdc4674032e87d68df7fbd96/0001-Gradle-Patch-to-supports-lazy-method-for-Java-16-Vel.patch' -O 0001-Gradle-Patch-to-supports-lazy-method-for-Java-16-Vel.patch
           wget 'https://gist.githubusercontent.com/Velosh/6ad1a93fa8d3d78116b17fd34068da2b/raw/721b834ab23095dd2ee795bee2f2d888616378dd/0001-Bot-Use-.-as-default-prefix.patch' -O '0001-Bot-Use-.-as-default-prefix.patch'
           git am 0001-Gradle-Patch-to-supports-lazy-method-for-Java-16-Vel.patch
