@@ -5,7 +5,6 @@ on:
 
 env:
   TZ: America/Recife
-  TOKEN: ${{ secrets.TOKEN }}
 
 jobs:
   build:
