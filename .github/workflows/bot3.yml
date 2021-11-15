@@ -1,10 +1,9 @@
-name: Bot3
-on:
-  push:
-    branches: [stag]
+name: Running bot
+ 
+on: push
 
 env:
-  TZ: America/Recife
+  TZ: Asia/Dhaka
 
 jobs:
   build:
