@@ -3,7 +3,7 @@ name: Running bot
 on: push
 
 env:
-  TZ: Asia/Dhaka
+  TZ: Asia
 
 jobs:
   build:
